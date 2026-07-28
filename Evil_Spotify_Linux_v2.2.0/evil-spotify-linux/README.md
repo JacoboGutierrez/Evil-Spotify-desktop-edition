@@ -141,7 +141,9 @@ rm -rf ~/.config/evil-spotify
 - Added creation of an executable desktop shortcut in the user's Desktop folder.
 
 <hr>
+
 # Español: #
+
 # Evil Spotify para Linux
 
 **Versión 2.2.0**
