@@ -1,3 +1,10 @@
+<p align="center">
+  <img
+    src="https://github.com/JacoboGutierrez/JacoboGutierrez/blob/main/evil-spoty.png?raw=true"
+    alt="Evil Spotify Demonstration"
+  />
+</p>
+
 # Evil Spotify para Linux
 
 **Versión 2.2.1**
