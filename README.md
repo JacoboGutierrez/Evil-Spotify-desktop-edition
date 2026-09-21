@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://github.com/JacoboGutierrez/JacoboGutierrez/blob/main/evil-spoty.png?raw=true"
+    src="https://github.com/JacoboGutierrez/JacoboGutierrez/blob/main/evil-spoty01.png?raw=true"
     alt="Evil Spotify Demonstration"
   />
 </p>
