@@ -7,7 +7,7 @@
 
 # Evil Spotify para Linux
 
-**Versión 2.2.1**
+**Versión 2.2.12**
 
 Reproductor de música local para Linux construido con **Python, PySide6 y mpv**. Utiliza una interfaz oscura inspirada en reproductores modernos, con rojo como color de acento predeterminado y el tema completamente personalizable.
 
@@ -120,25 +120,6 @@ La desinstalación conserva tus playlists y preferencias. Para borrarlas tambié
 
 ```bash
 rm -rf ~/.config/evil-spotify
-```
-
-
-## Cambios de la versión 2.2.1
-
-- Nueva paleta Evil Red predeterminada solicitada.
-- Los desplegables de Tema, Idioma y Preset respetan el tema oscuro, incluso en escritorios Linux que renderizan el popup en una ventana separada.
-- Se agrega automáticamente la playlist permanente `Favoritos`.
-- Corazón por canción ubicado entre el número y el título, sin encabezado adicional.
-- El corazón vacío aparece solamente al hacer hover sobre una canción no favorita.
-- El corazón lleno permanece visible en rojo para todas las canciones favoritas.
-- Marcar o desmarcar una canción actualiza inmediatamente la playlist Favoritos y el contador lateral.
-- Favoritos no puede renombrarse ni eliminarse accidentalmente.
-
-
-## Correcciones de la versión 2.1.1
-
-- Corregidos los avisos `Could not parse stylesheet of object ColorButton`.
-- Validación automática de los colores guardados antes de aplicarlos.
-- Instalación del icono en el tema `hicolor` y en `pixmaps`.
+``.
 - Actualización automática de las cachés de aplicaciones e iconos.
 - Creación de un acceso directo ejecutable en la carpeta de escritorio del usuario.
