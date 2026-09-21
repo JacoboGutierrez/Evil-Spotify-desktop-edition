@@ -5,6 +5,127 @@
   />
 </p>
 
+# Evil Spotify for Linux
+
+**Version 2.2.12**
+
+Local music player for Linux built with **Python, PySide6, and mpv**. It uses a dark interface inspired by modern players, featuring red as the default accent color and a fully customizable theme.
+
+## Features
+
+- Playback with original tuning or optional conversion to **432 Hz** without modifying speed.
+- Song table with **title, artist, album, and duration** extracted from file metadata.
+- Full-body vertical scrolling: header, cover art, controls, and songs move together.
+- Thin line-shaped scrollbar that adopts the theme's accent color.
+- 10-band equalizer, from -12 dB to +12 dB.
+- Creation, saving, and deletion of equalization presets.
+- Permanent **Favorites** playlist, automatically created.
+- Interactive heart between the track number and song title: the outline appears on hover, and the red heart stays visible when the song is favorited.
+- Tagged songs automatically sync with the Favorites playlist from any playlist.
+- Persistent playlists: create, double-click to rename, and delete.
+- Drag and drop songs or folders from the file manager into the current playlist.
+- Reorder songs by dragging them within the list.
+- Shuffle playback without repeating songs within the same cycle.
+- Repeat the entire playlist.
+- Single repeat for the current song.
+- Preset themes and fully customizable colors.
+- Default Evil Red palette: background `#090909`, panel `#101010`, secondary panel `#1B1B1B`, accent `#F5000F`, text `#F7F7F7`, and muted text `#A8A8A8`.
+- Theme, Language, and Preset dropdowns with Panel background and Secondary Panel highlight.
+- Spanish and English interface.
+- Automatic saving in `~/.config/evil-spotify/`.
+- Automatic import of previous data from `~/.config/resonance-player/` when applicable.
+
+## Recommended Installation
+
+Open a terminal in this folder and run:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+The installer supports Debian/Ubuntu, Fedora, Arch, and openSUSE. Afterward, you can open **Evil Spotify** from your applications menu or from the shortcut created in `Desktop`/`Escritorio`.
+
+To update a previous installation, run `./install.sh` again. Your playlists, themes, and presets will be preserved.
+
+## Run Without Installing
+
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+`run.sh` automatically creates a virtual environment and installs PySide6 and Mutagen. If it finds an incomplete `.venv` environment or one without `pip`, it deletes and rebuilds it.
+
+## System Dependencies
+
+- Python 3.10 or higher.
+- Support for `venv` and `pip`.
+- `mpv` compiled with Rubber Band/FFmpeg support.
+- Rubber Band.
+
+On Debian/Ubuntu:
+
+```bash
+sudo apt update
+sudo apt install python3 python3-venv python3-pip mpv librubberband2
+```
+
+On Fedora:
+
+```bash
+sudo dnf install python3 python3-pip mpv rubberband
+```
+
+On Arch Linux:
+
+```bash
+sudo pacman -S python python-pip mpv rubberband
+```
+
+## Repair an Incomplete Virtual Environment
+
+```bash
+rm -rf .venv
+sudo apt update
+sudo apt install python3-venv python3-pip
+./run.sh
+```
+
+Current versions detect and repair this case automatically.
+
+## How 432 Hz Works
+
+When the switch is enabled, the program uses the pitch factor:
+
+```text
+432 / 440 = 0.981818...
+```
+
+The Rubber Band filter modifies the pitch while keeping the song's original duration and speed.
+
+## Shortcuts
+
+- `Space`: Play or pause.
+- `Ctrl+O`: Add songs.
+- `Delete`: Remove selected songs from the playlist.
+
+## Uninstallation
+
+```bash
+./uninstall.sh
+```
+
+Uninstallation preserves your playlists and preferences. To delete them as well:
+
+```bash
+rm -rf ~/.config/evil-spotify
+```
+- Automatic update of application and icon caches.
+- Creation of an executable shortcut in the user's desktop folder.
+
+---
+
 # Evil Spotify para Linux
 
 **Versión 2.2.12**
@@ -77,7 +198,7 @@ En Fedora:
 sudo dnf install python3 python3-pip mpv rubberband
 ```
 
-En Arch Linux:
+In Arch Linux:
 
 ```bash
 sudo pacman -S python python-pip mpv rubberband
@@ -120,6 +241,6 @@ La desinstalación conserva tus playlists y preferencias. Para borrarlas tambié
 
 ```bash
 rm -rf ~/.config/evil-spotify
-``.
+```
 - Actualización automática de las cachés de aplicaciones e iconos.
 - Creación de un acceso directo ejecutable en la carpeta de escritorio del usuario.
